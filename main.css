@@ -8,10 +8,6 @@ body {
     background-image: url(images/registerbg.jpg);
 }
 
-.gallery {
-    background: #eee;
-}
-
 .gallery-cell {
     margin-right: 5px;
     margin-left: 5px;
