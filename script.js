@@ -1,6 +1,7 @@
 $(document).ready(function () {
-    console.log("ready!");
+    
 });
+
 
 //Precisamos, antes de tudo, fazer um request pro banco. Nesse request, conferimos se existe alguma
 //conta com o email desejado.
