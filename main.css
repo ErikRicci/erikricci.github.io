@@ -8,9 +8,17 @@ body {
     background-image: url(images/registerbg.jpg);
 }
 
+#store-selection {
+    background: rgb(191,40,36);
+    background: radial-gradient(circle, rgba(191,40,36,1) 25%, rgba(145,27,27,1) 43%, rgba(111,17,17,1) 71%);
+    margin-top: 25vh;
+}
+
 .gallery-cell {
     margin-right: 5px;
     margin-left: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
     width: fit-content;
     height: 200px;
     /* flex-box, center image in cell */

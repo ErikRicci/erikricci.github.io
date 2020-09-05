@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/png" href="public/images/favicon.ico">
-    <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/bebas" type="text/css"/>
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/bebas" type="text/css" />
     <link rel="stylesheet" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js"></script>
     <title>Eatflix</title>
@@ -14,12 +14,23 @@
 <body>
 
     <div id="registrardiv">
-        <img id="registraricon" src="public/images/comida.png">
-        <button id="loginbtn">LOGIN</button>
-        <img id="registraricon" src="public/images/comida.png"><br>
-        <img id="registraricon" src="public/images/comida.png">
+        <div style="font-family: Geneva, Tahoma, sans-serif; font-weight: bold; letter-spacing: 0.1vw; color: white;">
+            Entrar
+        </div>
+
+        <div id="logindiv">
+            <label for="email"></label>
+            <input id="email" type="email" placeholder="EMAIL"><br>
+            <label for="pass"></label>
+            <input id="pass" type="password" placeholder="PASS"><br>
+            <input id="submit" type="submit" value="LOGIN"
+                onclick="login(document.getElementById('email').value, document.getElementById('pass').value)"><br>
+            <a style="color: white;" href="registrar.html">Registrar</a><br>
+            <a style="color: white;" href="forgotpass.html">Esqueci minha senha</a>
+        </div>
+
+        <button id="loginbtn">Entrar</button>
         <button id="registrarbtn">REGISTRAR-SE</button>
-        <img id="registraricon" src="public/images/comida.png">
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
