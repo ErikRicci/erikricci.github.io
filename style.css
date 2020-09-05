@@ -69,8 +69,7 @@ body {
 #entregador {
     max-width: 700px;
     max-height: 700px;
-
-    position: relative;
+    position: absolute;
     animation: mymove 1s;
     animation-delay: 0.4s;
     animation-timing-function: ease-out;
@@ -81,11 +80,11 @@ body {
 @keyframes mymove {
     from {
         opacity: 0;
-        left: -5%;
+        left: -5vw;
     }
     to {
         opacity: 1;
-        left: 5%;
+        left: 5vw;
     }
 }
 
