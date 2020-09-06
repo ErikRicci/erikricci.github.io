@@ -23,9 +23,9 @@ $(document).ready(function () {
 //TESTAR: Uma experiência (COMO USUARIO, COMO LOJA E COMO DEV)
 
 $("#registrarbtn").click(function () {
-    window.location.href = "registrar.html";
+    window.location.href = "/public/html/registrar.html";
 });
 
 $("#loginbtn").click(function () {
-    window.location.href = "login.html";
+    window.location.href = "/public/html/login.html";
 });
