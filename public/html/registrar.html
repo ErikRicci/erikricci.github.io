@@ -4,16 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="public/images/favicon.ico">
     <link rel="stylesheet" media="screen" href="https://fontlibrary.org/face/bebas" type="text/css" />
     <link rel="stylesheet" href="../css/style.css">
     <title>Registrar Cliente</title>
 </head>
 
 <body>
-    <img id="entregador" src="../images/entregador.png">
 
     <div id="registrardiv">
+        <a class="back-btn" href="../../index.html">VOLTAR</a><br>
         <div class="regist">CRIAR CONTA</div>
         <hr>
         <label class="user-input" for="name">Nome:</label><br>
@@ -23,18 +22,14 @@
         <label class="user-input" for="senha">Senha:</label><br>
         <input id="senha" type="password" required><br><br>
         <label class="user-input" for="cod">Código:</label><br>
-        <input id="cod" type="text" required><br><br>
+        <input id="cod" type="text" maxlength="7" required><br><br>
         <hr>
-        <div id="registrarbtn">
-            <img id="registraricon" src="../public/images/comida.png">
-            <button class="registrar" id="registrarbtn">CRIAR CONTA</button>
-            <img id="registraricon" src="../public/images/comida.png">
-        </div>
+        <button class="registrar" id="registrarbtn">CRIAR CONTA</button>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="Construtor.js"></script>
-    <script src="registrar.js"></script>
+    <script src="../js/Construtor.js"></script>
+    <script src="../js/registrar.js"></script>
 </body>
 
 </html>

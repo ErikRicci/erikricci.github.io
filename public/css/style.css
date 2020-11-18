@@ -1,8 +1,24 @@
 body {
     background-image: url("../images/registerbg.jpg");
-    overflow: hidden;
-    height: 100%;
+    height: 100vh;
+    width: 100vw;
     min-height: 100%;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    letter-spacing: 0.2vw;
+}
+
+#access-div {
+    color: white;
+    font-size: 2vw;
+}
+
+#logindiv {
+    position: relative;
+    width: inherit;
 }
 
 #registrardiv {
@@ -14,68 +30,48 @@ body {
     top: 50vh;
     left: 50vw;
     transform: translate(-50%, -50%);
-        -webkit-transform: translate(-50%, -50%);
-        -moz-transform: translate(-50%, -50%);
-        -o-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
     background: rgba(0, 0, 0, 0.5);
     width: 15vw;
-    height: 60vh;
-    padding: 40px;
+    height: fit-content;
+    padding: 5vw;
     border-radius: 4px;
     font-family: "BebasNeueLight";
     font-size: 120%;
     letter-spacing: 0.4em;
 }
 
-#loginbtn {
-    background-color: transparent;
-    border: none;
-    border-radius: 20px;
-    color: white;
-    display: inline-block;
-    font-size: 16px;
-    font-family: "BebasNeueLight";
-    letter-spacing: 0.4em;
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-right: -15px;
-    padding-left: -15px;
-    margin-left: 50%;
-    width: 15vw;
-    transform: translate(-50%);
-        -webkit-transform: translate(-50%);
-        -moz-transform: translate(-50%);
-        -o-transform: translate(-50%);
-        -ms-transform: translate(-50%);
-}
-
+#loginbtn,
 #registrarbtn {
     background-color: transparent;
     border: none;
     border-radius: 20px;
     color: white;
     display: inline-block;
-    font-size: 16px;
+    font-size: 1.6vw;
     font-family: "BebasNeueLight";
     letter-spacing: 0.4em;
     padding-top: 15px;
     padding-bottom: 15px;
-    padding-right: -15px;
-    padding-left: -15px;
+    padding-right: 25px;
+    padding-left: 25px;
     margin-left: 50%;
-    width: 15vw;
+    width: fit-content;
     transform: translate(-50%);
-        -webkit-transform: translate(-50%);
-        -moz-transform: translate(-50%);
-        -o-transform: translate(-50%);
-        -ms-transform: translate(-50%);
+    -webkit-transform: translate(-50%);
+    -moz-transform: translate(-50%);
+    -o-transform: translate(-50%);
+    -ms-transform: translate(-50%);
 }
 
-#registrarbtn:hover, #loginbtn:hover {
+#registrarbtn:hover,
+#loginbtn:hover {
     background-color: rgb(119, 21, 21);
     cursor: pointer;
-  }
+}
 
 #registraricon {
     filter: invert(99%) sepia(68%) saturate(2%) hue-rotate(24deg) brightness(115%) contrast(100%);
@@ -83,14 +79,20 @@ body {
 }
 
 .user-input {
-    padding: 8px;
-    border-radius: 4px;
-    margin-left: 50%;
-    transform: translate(-50%);
-        -webkit-transform: translate(-50%);
-        -moz-transform: translate(-50%);
-        -o-transform: translate(-50%);
-        -ms-transform: translate(-50%);
+    color: white;
+    font-size: 2vw;
+}
+
+input {
+    width: inherit;
+}
+
+.back-btn {
+    color: white;
+    font-size: 1vw;
+    text-decoration: none;
+    position: absolute;
+    margin-top: -2vh;
 }
 
 .regist {
@@ -107,8 +109,16 @@ body {
     width: 15%;
 }
 
+#placer {
+    position: relative;
+}
 
-/* ANIMAÇÕES */
+#placehold {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -100%);
+}
 
 #entregador {
     max-height: 100vh;
@@ -119,6 +129,8 @@ body {
     animation-fill-mode: both;
     z-index: 1;
 }
+
+/* ANIMAÇÕES */
 
 @keyframes mymove {
     from {
@@ -139,5 +151,78 @@ body {
     to {
         opacity: 1;
         top: 50vh;
+    }
+}
+
+/* EFFECTS */
+
+.col-3 {
+    float: left;
+    width: 27.33%;
+    margin: 40px 3%;
+    position: relative;
+} /* necessary to give position: relative to parent. */
+
+#responsive {
+    font: 15px/24px "Lato", Arial, sans-serif;
+    color: #333;
+    width: 100%;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+}
+
+.effect {
+    border: 0;
+    padding: 7px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+.effect ~ .focus-border {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #4caf50;
+    transition: 0.4s;
+}
+.effect:focus ~ .focus-border {
+    width: 100%;
+    transition: 0.4s;
+}
+
+/* MOBILE ? */
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+    #registrardiv {
+        width: 40vw;
+    }
+
+    #access-div {
+        font-size: 8vw;
+    }
+
+    #loginbtn {
+        font-size: 6vw;
+    }
+
+    .user-input {
+        font-size: 8vw;
+    }
+
+    input {
+        width: inherit;
+        padding-top: 2vh;
+        padding-bottom: 2vh;
+        text-align: center;
+    }
+
+    a {
+        letter-spacing: 0.2vw;
+    }
+
+    #forgotpass {
+        font-size: 3vw;
+        letter-spacing: 1vw;
     }
 }

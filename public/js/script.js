@@ -1,7 +1,25 @@
-$(document).ready(function () {
-    
-});
-
+let login = (email, senha) => {
+    //Realiza uma nova conexão com o banco. O parâmetro passado é a chave da API
+    var db = new restdb("5f434e3a3abd4e679e244ba6");
+    //Query são os valores que estamos atrás. Usa-se uma combinação do EMAIL e da SENHA
+    //providos pelo usuário
+    var query = { "email_cliente": email, "senha_cliente": senha };
+    var hint = {};
+    db.clientes.find(query, hint, function (err, res) {
+        if (!err)
+        {
+            
+            // res retorna 0 se não houver aquela combinação
+            if (res.length < 1)
+                alert('Email ou senha incorretos. Tente Novamente.');
+            else
+            {
+                alert('Bem vindo, ' + res[0].nome_cliente + '! Você será redirecionado em alguns instantes...');
+                window.location.href = "/public/html/main.html";
+            }
+        }
+    });
+}
 
 //Precisamos, antes de tudo, fazer um request pro banco. Nesse request, conferimos se existe alguma
 //conta com o email desejado.
@@ -24,8 +42,4 @@ $(document).ready(function () {
 
 $("#registrarbtn").click(function () {
     window.location.href = "/public/html/registrar.html";
-});
-
-$("#loginbtn").click(function () {
-    window.location.href = "/public/html/login.html";
 });
