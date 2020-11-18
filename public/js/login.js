@@ -1,20 +1,3 @@
-let login = (email, senha) => {
-    var db = new restdb("5f434e3a3abd4e679e244ba6");
-    var query = { "email_cliente": email, "senha_cliente": senha };
-    var hint = {};
-    db.clientes.find(query, hint, function (err, res) {
-        if (!err) {
-            console.log(res);
-            if (res.length < 1)
-                alert('Email ou senha incorretos. Tente Novamente.');
-            else
-                alert('Bem vindo, ' + res[0].nome_cliente + '! Você será redirecionado em alguns instantes...');
-                window.location.href = "main.html";
-            // res is an array of clientes instances
-        }
-    });
-}
-
 let refazersenha = (email, nova_senha) => {
 
     var db = new restdb("5f434e3a3abd4e679e244ba6");

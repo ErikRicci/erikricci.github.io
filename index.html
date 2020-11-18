@@ -14,26 +14,32 @@
 <body>
     <div id="registrardiv">
         <br>
-        <div style="font-size: large; font-family: Geneva, Tahoma, sans-serif; font-weight: bold; letter-spacing: 0.1vw; color: white;">
+        <div id="access-div">
             Acesso
         </div><br><br>
 
         <div id="logindiv">
-            <label for="email"></label>
-            <input class="user-input" id="email" type="email" placeholder="EMAIL"><br><br>
-            <label for="pass"></label>
-            <input class="user-input" id="pass" type="password" placeholder="PASS"><br><br>
+
+            <div class="col-3" style="width: inherit">
+                <input id="responsive" class="effect" type="email">
+                <span class="focus-border"></span>
+            </div>
+
+            <div class="col-3" style="width: inherit">
+                <input id="responsive" class="effect" type="password">
+                <span class="focus-border"></span>
+            </div>
 
             <button id="loginbtn" onclick="login(document.getElementById('email').value,
-            document.getElementById('pass').value)">Fazer Login</button><br><br><br>
+            document.getElementById('pass').value)">Entrar</button><br><br><br>
 
-            <a style="color: white; font-size: 100%;" href="public/html/registrar.html">Registrar</a><br><br>
-            <a style="color: white; font-size: 100%;" href="public/html/forgotpass.html">Esqueci minha senha</a>
+            <a href="public/html/registrar.html">Registrar</a><br>
+            <a id="forgotpass" href="public/html/forgotpass.html">Esqueci minha senha</a>
         </div>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="public/js/login.js"></script>
+    <script src="https://eatflix-085c.restdb.io/rest/_jsapi.js"></script>
     <script src="public/js/script.js"></script>
 </body>
 

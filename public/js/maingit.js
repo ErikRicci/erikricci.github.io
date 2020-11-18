@@ -6,7 +6,7 @@ var menu = [];
 var menu_images = [];
 
 function createData() {
-    var mydata = { "access_token": "ac3507d0f1e461aa60124db3022325c6d127f337" };
+    var mydata = { "access_token": "c1633eb5364e3c722bd19eaed5429b0734aad358" };
     return (mydata);
 }
 
@@ -27,7 +27,8 @@ function getMenu(params) {
         }
         //Console.log do conteúdo (em base64) do arquivo
         var source = requiem.responseText;
-        source = JSON.parse(source);        
+        source = JSON.parse(source);
+        console.log(source);
         idLoja = source.name;
         idLoja = idLoja.slice(0, -5);
         source = source.content;
@@ -102,5 +103,5 @@ function makeCell(i, image) {
     return `<div class="gallery-cell" id="item-${i}">
     <img style="filter: blur(2px); -webkit-filter: blur(2px); border: 3px solid #f1f1f1"
     src="${image}"><label style="position: absolute; font-weight: bold">
-    ${menu[i].name}</label></img></div>`;
+    ${menu[i].name}<br>R$ ${menu[i].price}</label></img></div>`;
 }
